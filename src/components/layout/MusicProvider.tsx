@@ -34,3 +34,5 @@ export function useMusic() {
   if (!ctx) throw new Error('useMusic must be used within MusicProvider');
   return ctx;
 }
+
+export default MusicProvider;

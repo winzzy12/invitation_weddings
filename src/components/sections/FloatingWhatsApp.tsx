@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { FaWhatsapp } from 'react-icons/fa';
 
-export function FloatingWhatsApp() {
+export default function FloatingWhatsApp() {
   const message = encodeURIComponent(
     'Halo! Saya ingin konfirmasi kehadiran di pernikahan Sarah & James.'
   );

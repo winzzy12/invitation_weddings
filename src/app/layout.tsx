@@ -1,19 +1,25 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import { MusicProvider } from '@/components/layout/MusicProvider';
-import { FloatingWhatsApp } from '@/components/sections/FloatingWhatsApp';
+import MusicProvider from '@/components/layout/MusicProvider';
+import FloatingWhatsApp from '@/components/sections/FloatingWhatsApp';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/sections/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: '#D4A853',
+};
 
 export const metadata: Metadata = {
   title: 'The Wedding of Sarah & James — 12 Desember 2026',
   description: 'Kami mengundang Anda untuk merayakan pernikahan Sarah & James pada 12 Desember 2026.',
   keywords: ['wedding', 'undangan pernikahan', 'digital invitation', 'Sarah & James'],
   manifest: '/manifest.json',
-  themeColor: '#D4A853',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
@@ -44,7 +50,6 @@ export default function RootLayout({
       <head>
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
-        <meta name="theme-color" content="#D4A853" />
       </head>
       <body className={inter.className}>
         <MusicProvider>
