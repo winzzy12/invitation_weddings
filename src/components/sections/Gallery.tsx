@@ -102,7 +102,7 @@ export default function Gallery() {
               src={galleryImages[selected]}
               alt="Selected"
               className="max-w-[90vw] max-h-[90vh] object-contain rounded-lg"
-              onClick={e => e.stopPropagation()}
+              onClick={(e: React.MouseEvent) => e.stopPropagation()}
             />
           </motion.div>
         )}
