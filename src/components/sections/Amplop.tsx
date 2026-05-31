@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FiCopy, FiCheck, FiQr } from 'react-icons/fi';
+import { FiCopy, FiCheck } from 'react-icons/fi';
 
 const accounts = [
   { bank: 'BCA', number: '1234567890', name: 'SARAH ELIZABETH', color: '#0066CC' },

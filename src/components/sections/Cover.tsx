@@ -1,15 +1,17 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import confetti from 'canvas-confetti';
 import { useMusic } from '@/components/layout/MusicProvider';
 
-export default function Cover() {
-  const router = useRouter();
-  const searchParams = useSearchParams();
-  const guestName = searchParams.get('to') || 'Tamu Undangan';
+interface CoverProps {
+  guestName: string;
+  router: ReturnType<typeof useRouter>;
+}
+
+export default function Cover({ guestName, router }: CoverProps) {
   const [opened, setOpened] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
   const { playMusic } = useMusic();

@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 import { FaBars, FaTimes, FaMoon, FaSun } from 'react-icons/fa';
 
 const sections = [
